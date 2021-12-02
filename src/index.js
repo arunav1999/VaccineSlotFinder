@@ -1,4 +1,4 @@
-import React from 'react';
+import React,{useEffect} from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
@@ -7,16 +7,22 @@ import Testing from './testing/Testing';
 import CategoryCheckbox from './checkbox/CategoryCheckbox';
 import Dropdowns from './dropdowns/Dropdowns'
 import Cards from './cards/Cards'
+import Datepickers from './datepickers/Datepickers';
+
+
 
 ReactDOM.render(
   <>
     <Navbar/>,
     <CategoryCheckbox/>,
     <Dropdowns/>,
+    <Datepickers/>,
     <Cards/>
   </>,
   document.getElementById('root')
 );
 
 
+
 reportWebVitals();
+

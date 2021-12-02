@@ -69,7 +69,7 @@
         display: flex;
         flex-direction: column;
         justify-content:space-evenly;
-        overflow: scroll;
+        overflow-y: scroll;
         height: 45vh;
       
       }
@@ -79,13 +79,44 @@
         {
           flex-direction: column;
         }
+        .date_pickers
+        {
+          flex-direction: column;
+          justify-content: center;
+        }
+        .bs
+        {
+          padding-top: 0.5vh;
+          padding-bottom:0.5vh;
+        }
       }
      .search_btn
      {
        background-color: orange!important;
        border-color: orange!important;
      }
-
+     .date_picker_container
+     {
+       display: flex;
+       justify-content: center;
+     }
+     .date_pickers
+     {
+       display: flex;
+       justify-content: space-between;
+       width: 100%;
+     }
+     .inside_datepicker_container
+     {
+      display: flex;
+      justify-content: space-between;
+     }
+     .bs 
+     {
+       padding-left: 2vw;
+       padding-right:2vw ;
+     }
+     
 
     </style>
     
