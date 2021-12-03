@@ -1,6 +1,9 @@
+import Cards from '../cards/Cards'
 import { render } from '@testing-library/react';
 import React from 'react';
 import ReactDom from 'react-dom';;
+
+
 
 const Datepickers = () =>
 {
@@ -38,7 +41,16 @@ const Datepickers = () =>
                     </div>
                 </div>
             </div>
+            <div className="search_btn_container">
+                <div className="search_btn">
+                    <button type="button" class="btn btn-primary sb">Search</button>
+                </div>
+                
+            </div>
+            
+            <Cards/>
             </>
+            
         )
     }
 

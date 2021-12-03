@@ -1,6 +1,5 @@
 import React,{useEffect} from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
 import reportWebVitals from './reportWebVitals';
 import Navbar from './navbar/Navbar';
 import Testing from './testing/Testing';
@@ -14,10 +13,7 @@ import Datepickers from './datepickers/Datepickers';
 ReactDOM.render(
   <>
     <Navbar/>,
-    <CategoryCheckbox/>,
-    <Dropdowns/>,
-    <Datepickers/>,
-    <Cards/>
+    
   </>,
   document.getElementById('root')
 );

@@ -1,3 +1,4 @@
+import CategoryCheckbox from '../checkbox/CategoryCheckbox'
 import { render } from '@testing-library/react';
 import React from 'react';
 import ReactDOM from 'react-dom'
@@ -29,6 +30,7 @@ const Navbar = () =>
                     </div>
                 </nav>
                 <h1 className="dropdown_aligner">Filters:</h1>
+                <CategoryCheckbox/>,
             </>
         );
     }

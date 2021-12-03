@@ -1,6 +1,7 @@
 import { render } from '@testing-library/react';
 import React,{useEffect,useState} from 'react';
 import ReactDOM from 'react-dom'
+import Datepickers from '../datepickers/Datepickers';
 
 
 
@@ -11,6 +12,7 @@ const Dropdowns = () =>
     const [states, setStates] = useState([]);
     const [districts_of_chosen_state,setDistrictsForChosenState] = useState([]);
     const [chosen_state_id,setChosenStateId] = useState(0);
+    const [chosen_district_id,setChosenDistrictId] = useState(0);
 
     useEffect(() => {
         fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states').then(res => {
@@ -54,6 +56,18 @@ const Dropdowns = () =>
         })
         return id;
     }
+    function getDistrictIdForDistrict(for_district)
+    {
+        var id;
+        districts_of_chosen_state.forEach((d) => {
+            if(d.district_name == for_district)
+            {
+                id = d.district_id
+                return false;
+            }
+        })
+        return id;
+    }
     const handleChangeForState = (e) =>
     {
         var chosen_state_name = document.getElementById("states_dropdown").value;
@@ -62,6 +76,13 @@ const Dropdowns = () =>
         var state_id = getStateIdForState(chosen_state_name)
         setChosenStateId(state_id)
         
+    }
+    const handleChangeForDistrict = (e) =>
+    {
+        var chosen_district_name = document.getElementById("districts_dropdown").value;
+        var district_id = getDistrictIdForDistrict(chosen_district_name);
+        setChosenDistrictId(district_id);
+        console.log(district_id)
     }
     
     render()
@@ -78,17 +99,17 @@ const Dropdowns = () =>
                         </div>  
 
                         <div>
-                            <select id="districts_dropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <select onChange={(e) => handleChangeForDistrict(e)} id="districts_dropdown" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
                                 <option selected>District</option>
                                 
                             </select>
                         </div>  
-                        <button type="button" class="btn btn-primary search_btn">Search</button>
+                        
                         
                    </div>
                 </div>
                </div>
-                
+               <Datepickers/>
             </>
         );
     }

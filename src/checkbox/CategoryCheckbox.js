@@ -1,3 +1,4 @@
+import Dropdowns from '../dropdowns/Dropdowns';
 import { render } from '@testing-library/react';
 import React from 'react';
 import {useState} from 'react';
@@ -53,6 +54,8 @@ const CategoryCheckbox = () =>
           </div>
           
         </div>
+        <br/>
+        <Dropdowns/>
       </>
     );
   }
