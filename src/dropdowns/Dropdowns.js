@@ -7,7 +7,7 @@ import Datepickers from '../datepickers/Datepickers';
 
 
 
-const Dropdowns = () =>
+const Dropdowns = (props) =>
 {
     const [states, setStates] = useState([]);
     const [districts_of_chosen_state,setDistrictsForChosenState] = useState([]);
@@ -105,11 +105,10 @@ const Dropdowns = () =>
                             </select>
                         </div>  
                         
-                        
                    </div>
                 </div>
                </div>
-               <Datepickers/>
+               <Datepickers filters = {props.sf}/>
             </>
         );
     }

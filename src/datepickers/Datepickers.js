@@ -5,8 +5,9 @@ import ReactDom from 'react-dom';;
 
 
 
-const Datepickers = () =>
+const Datepickers = (props) =>
 {
+    console.log(props.filters);
     var today = new Date();
     var date_buttons = [];
     var day = today.getDate();
