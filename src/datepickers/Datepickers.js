@@ -7,7 +7,11 @@ import ReactDom from 'react-dom';;
 
 const Datepickers = (props) =>
 {
-    console.log(props.filters);
+
+    const onClickHandler = (event) =>{
+        props.setDate(event.target.value)
+    }
+    
     var today = new Date();
     var date_buttons = [];
     var day = today.getDate();
@@ -15,7 +19,7 @@ const Datepickers = (props) =>
     var year = today.getFullYear();
     date_buttons.push(
         <div className="bs">
-            <button type="button" class="btn btn-info">{day}-{month}-{year}</button>
+            <button onClick={(event) => onClickHandler(event)} value={day+'-'+month+'-'+year} type="button" class="btn btn-info">{day}-{month}-{year}</button>
         </div>
     );
     for(let i=0;i<3;i++)
@@ -26,7 +30,7 @@ const Datepickers = (props) =>
         var year = today.getFullYear();
         date_buttons.push(
             <div className="bs">
-                <button type="button" class="btn btn-info">{day}-{month}-{year}</button>
+                <button onClick={(event) => onClickHandler(event)} value={day+'-'+month+'-'+year} type="button" class="btn btn-info">{day}-{month}-{year}</button>
             </div>
         );
     }
@@ -49,7 +53,7 @@ const Datepickers = (props) =>
                 
             </div>
             
-            <Cards/>
+            
             </>
             
         )
