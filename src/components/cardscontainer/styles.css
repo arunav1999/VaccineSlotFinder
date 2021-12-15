@@ -1,0 +1,5 @@
+.result_card_container
+{
+    height: 45vh;
+    overflow-y: scroll;
+}

@@ -1,0 +1,6 @@
+.nv
+{
+    position: fixed !important;
+    z-index: 999 !important;
+    width: 100% !important;
+}
