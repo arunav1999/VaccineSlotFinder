@@ -42,7 +42,11 @@ const Cards = ({
                                 <p class="card-text"><span style={{fontWeight:'bold'}}>Vaccine: </span>{vaccine}</p>
                                 <p class="card-text"><span style={{fontWeight:'bold'}}>Available Dose 1: </span>{available_capacity_dose1}</p>
                                 <p class="card-text"><span style={{fontWeight:'bold'}}>Availabe Dose 2: </span>{available_capacity_dose2}</p>
-                                <p class="card-text" style={{color:"green"}}><span style={{fontWeight:'bold',color:'black'}}>Paid/Free: </span>{fee_type}</p>
+                                {
+                                  fee_type === 'Free' ? <p class="card-text" style={{color:"green"}}><span style={{fontWeight:'bold',color:'black'}}>Paid/Free: </span>{fee_type}</p> :
+                                                        <p class="card-text" style={{color:"red"}}><span style={{fontWeight:'bold',color:'black'}}>Paid/Free: </span>{fee_type}</p>
+                                }
+                                
 
                             </div>
                         </div>

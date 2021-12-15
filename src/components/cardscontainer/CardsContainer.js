@@ -21,7 +21,7 @@ const CardsContainer = (props) =>
   return(
     <div className="result_card_container">
       {
-        carData.length === 0 ? <div>No availability for the chosen criteria</div> :
+        carData.length === 0 ? <h1>No availability for the chosen criteria</h1> :
         carData.map((data) => 
           <Cards {...data}/>
         )

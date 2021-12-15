@@ -8,7 +8,7 @@ const CategoryCheckbox = (props) =>
     const [vaccineFilter, setVaccineFilter] = useState({
       covaxin: false,
       sputnikV: false,
-      covisheild: false
+      covishield: false
     })
 
     const [ageGroupFilter, setAgeGroupFilter] = useState({
@@ -76,7 +76,7 @@ const CategoryCheckbox = (props) =>
           </div>
 
           <div className="checkbox">
-            <input name="COVISHIELD" onChange={handleVaccines} type="checkbox" class="btn-check vaccine" id="btn-check-outlined2" autocomplete="off" checked={vaccineFilter.covisheild}/>
+            <input name="COVISHIELD" onChange={handleVaccines} type="checkbox" class="btn-check vaccine" id="btn-check-outlined2" autocomplete="off" checked={vaccineFilter.covishield}/>
             <label class="btn btn-outline-primary" for="btn-check-outlined2">Covishield</label>
           </div>
 

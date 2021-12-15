@@ -1,0 +1,4 @@
+.dpbtns:focus
+{
+    outline: red auto 3px !important;
+}
