@@ -9,7 +9,6 @@ const getStatesData = () => {
     return fetch('https://cdn-api.co-vin.in/api/v2/admin/location/states')
         .then(response => response.json())
         .then(res => {
-            console.log('State Data Response', res)
             return res.states
         })
         .catch(err => {

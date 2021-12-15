@@ -11,7 +11,7 @@ const Navbar = (props) =>
         return(
             <>
                <nav class="navbar navbar-expand-lg navbar-dark bg-dark nv">
-                    <a class="navbar-brand" href="#">Vaccine Slot Finder</a>
+                    <a class="navbar-brand" href="#">GetMeJabbed.com</a>
                     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                         <span class="navbar-toggler-icon"></span>
                     </button>

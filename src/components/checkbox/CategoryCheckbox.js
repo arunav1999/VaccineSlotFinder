@@ -31,7 +31,7 @@ const CategoryCheckbox = (props) =>
 
           covaxin: name === 'COVAXIN' ? value : false,
           sputnikV: name === 'SPUTNIKV' ? value : false,
-          covisheild: name === 'COVISHIELD' ? value : false
+          covishield: name === 'COVISHIELD' ? value : false
         }
       )
     }

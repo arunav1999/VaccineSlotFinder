@@ -3,6 +3,7 @@ import React from 'react';
 import {useState, useEffect} from 'react';
 import Cards from '../cards/Cards'
 import {getAvailabilityByDistrict} from '../../utils/Utility'
+import {getFilteredResults} from '../../utils/FilterSetter'
 import './styles.css'
 
 const CardsContainer = (props) =>
@@ -14,13 +15,13 @@ const CardsContainer = (props) =>
     var dt = props.date === '' ? '31-03-2021' : props.date
     getAvailabilityByDistrict(did, dt)
     .then((res) => {
-      setCardData(res.sessions)
+      setCardData(getFilteredResults(props.filters, res.sessions))
     })
-  }, [props.stateId ,props.districtId, props.date])
+  }, [props.stateId ,props.districtId, props.date, props.filters])
   return(
     <div className="result_card_container">
       {
-        
+        carData.length === 0 ? <div>No availability for the chosen criteria</div> :
         carData.map((data) => 
           <Cards {...data}/>
         )
