@@ -1,6 +1,11 @@
 .card_container
 {
+    
+    margin: 0.5vh !important;
+    width: 100% !important;
+}
+.card
+{
     border: 3px solid lightgrey !important;
     border-radius: 10px !important;
-    margin: 1vh;
 }

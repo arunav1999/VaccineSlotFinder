@@ -1,17 +1,13 @@
-.nv
-{
-    position: fixed !important;
-    z-index: 999 !important;
-    width: 100% !important;
-}
 .header
 {
     height: 7vh;
     width: 100%;
     background-color: darkslategrey;
+
 }
 .heading_text
 {
     text-align: center;
     color:antiquewhite;
+    font-size: 2em;
 }

@@ -7,7 +7,7 @@ import Cards from '../cards/Cards'
 import { render } from '@testing-library/react';
 import Datepickers from '../datepickers/Datepickers'
 import CardsContainer from '../cardscontainer/CardsContainer'
-
+import './styles.css'
 
 
 const AppComponent = () =>{
@@ -22,6 +22,8 @@ const AppComponent = () =>{
         return(
             <React.Fragment>
                 <Navbar/>
+                <h1 className="dropdown_aligner filters_heading">Filters:</h1>
+                <h6 className="dropdown_aligner filters_sub_heading">Please select all the filters</h6>
                 <CategoryCheckbox setFilters={setFilters}/>
                 <Dropdowns setStateId={setStateId} setDistrictId={setDistrictId}/>
                 <Datepickers setDate={setDate}/>

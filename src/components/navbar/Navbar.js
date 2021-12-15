@@ -13,8 +13,6 @@ const Navbar = (props) =>
                 <div className="header">
                     <h1 className="heading_text">GetMeJabbed.com</h1>
                 </div>
-                <h1 className="dropdown_aligner">Filters:</h1>
-                
             </>
         );
     }
