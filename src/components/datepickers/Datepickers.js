@@ -34,22 +34,21 @@ const Datepickers = (props) =>
             </div>
         );
     }
-    render()
-    {
-        return(
-            <>
-            <div className="dropdown_aligner">Choose between dates</div>
-            <div className="date_picker_container">
-                <div className="inside_datepicker_container">
-                    <div className="date_pickers">
-                        {date_buttons}
-                    </div>
+    
+    return(
+        <>
+        <div className="dropdown_aligner">Choose between dates</div>
+        <div className="date_picker_container">
+            <div className="inside_datepicker_container">
+                <div className="date_pickers">
+                    {date_buttons}
                 </div>
             </div>
-            </>
-            
-        )
-    }
+        </div>
+        </>
+        
+    )
+    
 
 }
 export default Datepickers;

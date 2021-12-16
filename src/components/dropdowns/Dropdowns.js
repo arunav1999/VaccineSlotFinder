@@ -68,48 +68,47 @@ const Dropdowns = (props) =>
     }
 
     
-    render()
-    {
-        return(
-            <>
-               <div className="dropdown_aligner">
-               <div className="dropdown_container">
-                   <div className="dropdown">
-                       {
-                           states.length > 0 && 
-                           <div>
-                            <select value={state.stateId} onChange={handleChange} name="stateId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                <option value="0">State</option>
-                                {   
-                                    states.map(({state_id,state_name}) => {
-                                        return <option value={state_id}>{state_name}</option>
-                                    })
-                                }
-                            </select>
-                        </div>
-                       }
-                        
+   
+    return(
+        <>
+            <div className="dropdown_aligner">
+            <div className="dropdown_container">
+                <div className="dropdown">
+                    {
+                        states.length > 0 && 
+                        <div>
+                        <select value={state.stateId} onChange={handleChange} name="stateId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option value="0">State</option>
+                            {   
+                                states.map(({state_id,state_name}) => {
+                                    return <option value={state_id}>{state_name}</option>
+                                })
+                            }
+                        </select>
+                    </div>
+                    }
+                    
 
-                        {
-                            districts.length > 0 && 
-                            <div>
-                            <select value={state.districtId} onChange={handleChange} name="districtId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
-                                <option value="0">District</option>
-                                {   
-                                    districts.map(({district_id, district_name}) => {
-                                        return <option value={district_id}>{district_name}</option>
-                                    })
-                                }
-                            </select>
-                        </div> 
-                        }   
-                        
-                   </div>
+                    {
+                        districts.length > 0 && 
+                        <div>
+                        <select value={state.districtId} onChange={handleChange} name="districtId" class="form-select form-select-lg mb-3" aria-label=".form-select-lg example">
+                            <option value="0">District</option>
+                            {   
+                                districts.map(({district_id, district_name}) => {
+                                    return <option value={district_id}>{district_name}</option>
+                                })
+                            }
+                        </select>
+                    </div> 
+                    }   
+                    
                 </div>
-               </div>
-              
-            </>
-        );
-    }
+            </div>
+            </div>
+            
+        </>
+    );
+    
 }
 export default Dropdowns;

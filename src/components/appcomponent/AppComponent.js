@@ -17,20 +17,19 @@ const AppComponent = () =>{
     const [filters, setFilters] = useState({});
     const [date, setDate] = useState("");
 
-    render()
-    {
-        return(
-            <React.Fragment>
-                <Navbar/>
-                <h1 className="dropdown_aligner filters_heading">Filters:</h1>
-                <h6 className="dropdown_aligner filters_sub_heading">Please select all the filters</h6>
-                <CategoryCheckbox setFilters={setFilters}/>
-                <Dropdowns setStateId={setStateId} setDistrictId={setDistrictId}/>
-                <Datepickers setDate={setDate}/>
-                <CardsContainer stateId={stateId} districtId={districtId} filters={filters} date={date}/>
-            </React.Fragment>
-        )
-    }
+    
+    return(
+        <React.Fragment>
+            <Navbar/>
+            <h1 className="dropdown_aligner filters_heading">Filters:</h1>
+            <h6 className="dropdown_aligner filters_sub_heading">Please select all the filters</h6>
+            <CategoryCheckbox setFilters={setFilters}/>
+            <Dropdowns setStateId={setStateId} setDistrictId={setDistrictId}/>
+            <Datepickers setDate={setDate}/>
+            <CardsContainer stateId={stateId} districtId={districtId} filters={filters} date={date}/>
+        </React.Fragment>
+    )
+    
 };
 
 export default AppComponent;

@@ -18,6 +18,7 @@ const CardsContainer = (props) =>
       setCardData(getFilteredResults(props.filters, res.sessions))
     })
   }, [props.stateId ,props.districtId, props.date, props.filters])
+  
   return(
     <div className="result_card_container">
       {
