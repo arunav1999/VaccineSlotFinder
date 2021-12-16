@@ -2,6 +2,7 @@
 {
     height: 45vh;
     overflow-y: scroll;
+    margin-top: 3vh;
 }
 .no_data_msg
 {
