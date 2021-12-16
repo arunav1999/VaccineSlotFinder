@@ -3,9 +3,11 @@
     
     margin: 0.5vh !important;
     width: 100% !important;
+    
 }
 .card
 {
     border: 3px solid lightgrey !important;
     border-radius: 10px !important;
+    box-shadow: 0 3px 10px rgb(0 0 0 / 0.5);
 }
